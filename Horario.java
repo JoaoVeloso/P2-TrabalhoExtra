@@ -33,6 +33,13 @@ public class Horario {
         this.duracao = validarDuracao(duracao);
     }
 
-
-
+    @Override
+    public String toString() {
+        return "Horario:" +
+                "duracao " + duracao +
+                ", diaDaSemana " + diaDaSemana +
+                ", hora " + hora +
+                ", minutos " + minutos +
+                '}';
+    }
 }

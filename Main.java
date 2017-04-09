@@ -8,9 +8,13 @@ public class Main {
 
         Aula aula = new Aula(3, "P2", professor);
 
-        Horario horario = new Horario(DiaDaSemana.SEGUNDA, -10, 3, 3);
+        Horario horario = new Horario(DiaDaSemana.SEGUNDA, 5, 3, 3);
+
+        aula.setHorario(horario);
 
         professor.adicionar(aula);
+        System.out.println(professor.getAulaHorario(horario));
+
         professor.assinarSumario(aula);
 
         System.out.println(aula.getSumario());

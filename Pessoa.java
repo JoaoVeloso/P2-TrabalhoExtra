@@ -1,9 +1,6 @@
 import java.util.ArrayList;
 import java.util.List;
 
-/**
- * Created by Joao on 01/04/2017.
- */
 public abstract class Pessoa extends Identificador{
     protected List<Aula> aulas;
 
@@ -21,8 +18,17 @@ public abstract class Pessoa extends Identificador{
     }
 
     public boolean assinarSumario(Aula aula){
-        if (! aulas.contains(aula))
+        if(! aulas.contains(aula))
             return false;
         return true;
+    }
+
+    public Aula getAulaHorario(Horario horario){
+        for(Aula aula : aulas){
+            if(aula.getHorario().equals(horario)){
+                return aula;
+            }
+        }
+        return null;
     }
 }

@@ -1,9 +1,6 @@
 import java.util.ArrayList;
 import java.util.List;
 
-/**
- * Created by Joao on 01/04/2017.
- */
 public class Aula extends Identificador {
 
     private String sumario;
@@ -22,18 +19,30 @@ public class Aula extends Identificador {
         return alunos;
     }
 
-    public String getSumario() {
+    public String getSumario(){
         return sumario;
     }
 
     public void assinarSumario(Pessoa assinante){
-        if (assinante instanceof Aluno && alunos.contains((Aluno) assinante))
+        if(assinante instanceof Aluno && alunos.contains((Aluno) assinante))
             sumario += "Aluno: " + assinante.getNome();
         else if (assinante instanceof Professor && ((Professor) assinante).equals(professor))
             sumario += "Professor: " + assinante.getNome();
+
     }
 
     public Horario getHorario() {
         return horario;
+    }
+
+    public void setHorario(Horario horario) {
+        this.horario = horario;
+    }
+
+    @Override
+    public String toString() {
+        return "sumario '" + sumario + '\'' +
+                ", professor " + professor +
+                ", horario " + horario;
     }
 }
