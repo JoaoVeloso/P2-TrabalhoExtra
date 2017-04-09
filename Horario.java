@@ -1,3 +1,6 @@
+/**
+ * Created by Joao on 06/04/2017.
+ */
 public class Horario {
     int duracao;
     DiaDaSemana diaDaSemana;
@@ -7,9 +10,7 @@ public class Horario {
     private int validarHora(int hora){
         if (hora > 23 || hora < 0) {
             System.out.println("A hora não está compreendida entre 0 e 23");
-            hora = 2;
         }
-        System.out.println(hora);
         return hora;
     }
 
@@ -33,6 +34,11 @@ public class Horario {
         this.duracao = validarDuracao(duracao);
     }
 
-
-
+    @Override
+    public String toString() {
+        return "\n" + "Duracao: " + duracao + '\n' +
+                "DiaDaSemana " + diaDaSemana + '\n' +
+                "Hora: " + hora + '\n' +
+                "Minutos " + minutos + '\n';
+    }
 }

@@ -25,4 +25,13 @@ public abstract class Pessoa extends Identificador{
             return false;
         return true;
     }
+
+    public Aula getAulaHorario(Horario horario){
+        for(Aula aula : aulas){
+            if(aula.getHorario().equals(horario)){
+                return aula;
+            }
+        }
+        return null;
+    }
 }

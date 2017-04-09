@@ -27,4 +27,11 @@ public class Identificador {
     public List<Aula> getAulas(){
         return aulas;
     }
+
+    @Override
+    public String toString() {
+        return "\t" + "Nome: " + nome + "\t" +
+                "Número: " + numero + '\n';
+    }
+
 }

@@ -14,7 +14,6 @@ public class Professor extends Pessoa {
     @Override
     public boolean assinarSumario(Aula aula) {
 
-        //Fazer melhor a validação -> if pode assinar .... (em termos lógicos)
         if (!super.assinarSumario(aula))
             return false;
 
@@ -26,4 +25,6 @@ public class Professor extends Pessoa {
 
         return true;
     }
+
+
 }
